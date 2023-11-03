@@ -5,6 +5,7 @@ import Header from './components/Header/header';
 import Form from './components/Forms/form';
 import CardList from './components/CardList/cardList';
 import Legend from './components/Legend/legend';
+import Footer from './components/Footer/footer';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Form/>
         <Legend/>
         <CardList/>
+        <Footer/>
       </div>
     </QueryClientProvider>
   )
