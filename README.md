@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+# Desafio SmartFit
+Foi usado framework React.js e algumas bibliotecas para realizar esse projeto.
+<hr/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre o Desafio 
+A Smart Fit, por atuar no segmento de fitness, passou por várias mudanças na pandemia. Foi necessário desenvolver uma página para buscar unidades fechadas ou abertas para consulta e reserva.
 
-Currently, two official plugins are available:
+### Funcionalidades
+[x] Carrega unidades através do arquivo JSON [locations.json](https://test-frontend-developer.s3.amazonaws.com/data/locations.json) utilizando o método `GET`.
+[x] Busca por todas as unidades.
+[x] Busca por unidades com filtros.
+[x] Previsão do número de resultados encontrados.
+[x] Listagem das unidades encontradas após a busca.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Regras de negócio
+- Filtra unidades abertas ou fechadas.
+- Filtra unidades por período de funcionamento.
+- Exibe a mensagem "Nenhuma unidade encontrada" quando não há resultados.
+- Valida e exibe os ícones corretos de acordo com o status da unidade.
 
-## Expanding the ESLint configuration
+## 🎨 Layout
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O layout da aplicação foi baseado nos materiais disponibilizados, incluindo designs para dispositivos móveis e desktop, cores, imagens e fontes. A fidelidade ao layout proposto foi mantida, e a aplicação é responsiva para dispositivos móveis, tablets e desktops.
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone este repositório:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+  git clone https://github.com/Miott0/smart-fit-fe
+  cd smart-fit-fe
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Instale as dependências
+
+```bash
+  npm install
+```
+
+3. Inicie a aplicação
+
+```bash
+  npm start
+```
+
+## Licença
+Este projeto está sob a licença MIT.
+
+
+ Link do teste - https://github.com/bioritmo/front-end-code-challenge-smartsite/tree/master
