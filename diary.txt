@@ -1,0 +1,5 @@
+30/10/2023 -- (15)foi dificil achar algum exemplo ou alguma informacao de como ler o qrquivo o djson. Achei um codigo do mesmo desfio fazendo.
+                Usei, mas nao foi algo que gostei, mas vou usa-lo como materia de estudo (VITE, REACT QUERY, CONTEXT).
+                Essa nao foi minha primeira opcão estou a tres dias buscando em foruns, videos, documetações, mas como nao queria 
+                ficar muito tempo no mesmo projeto tive que fazer isso.
+

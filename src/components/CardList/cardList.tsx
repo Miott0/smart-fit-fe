@@ -1,0 +1,52 @@
+import './cardList.scss';
+
+import useDataQuery from "../../hooks/useDataQuery";
+import useSearchContext from "../../hooks/useSearchContext";
+import { DataResponseType } from "../../types";
+import Card from "../Card/card";
+
+
+const cardList = () => {
+
+    const { data } = useDataQuery();
+    const { trainingPeriod, closed, setNumberOfUnits } = useSearchContext();
+
+    if (!data) {
+        return <p>Nenhuma academia encontrada.</p>;
+    }
+
+    const list = data?.locations as DataResponseType[] || [];
+
+
+    const isMatchTimeRange = (schedule: { hour: string }): boolean => {
+        const [start, end] = schedule.hour.split(' ');
+        const period = trainingPeriod.split(' ');
+        const [startTreiningPeriod, endTreiningPeriod] = period;
+        return startTreiningPeriod >= start && endTreiningPeriod <= end;
+    };
+
+    const filterList = trainingPeriod
+        ? list.filter((item) => {
+            const isOpen = item.opened === !closed;
+            const hasMatchingSchedule = item.schedules?.some(isMatchTimeRange);
+            return isOpen && hasMatchingSchedule;
+        })
+        : closed ? list.filter((item) => !item.opened) : list;
+
+    setNumberOfUnits(filterList.length);
+    
+
+    return(
+        <div className="cardListContainer">
+            {
+                filterList.length > 0
+                ? filterList.map((item, index) =>(
+                    <Card key={index} {...item}/>
+                ))
+                : <p>Nenhuma academia encontrada</p>
+            }
+        </div>
+    );
+}
+
+export default cardList;

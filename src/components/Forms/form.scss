@@ -1,0 +1,129 @@
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+    width: 100%;
+
+    padding: 24px;
+
+    border: 3px solid var(--grey);
+    border-radius: 16px;
+
+    margin: 0 auto;
+
+    color: var(--light-grey);
+
+    .tittle-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .form-icon {
+            height: 30px;
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 300;
+        margin-top: 32px;
+        border-bottom: 2px solid var(--grey);
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+    }
+
+  .input-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 2px solid var(--grey);
+
+        padding: 8px;
+
+        position: relative;
+        gap: 8px;
+        margin-bottom: 32px;
+
+        span {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .checkbox-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .checkbox-wrapper {
+            display: flex;
+            gap: 8px;
+            
+        }
+        
+
+    
+    }
+
+
+   
+
+    .btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            font-size: 18px;
+            border-radius: 4px;
+            color: var(--dark-grey);
+            font-weight: bold;
+            padding: 14px;
+            width: 150px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        @media (min-width: 768px) {
+            width: 25%;
+        }
+
+        .btn-primary {
+            background-color: var(--yellow);
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            border-color:var(--grey);
+            border-width: 2px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .checkbox-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .btn-wrapper{
+            flex-direction: row;    
+        }
+        
+    
+    
+    }
+
+} /* form-group end */
+
+
